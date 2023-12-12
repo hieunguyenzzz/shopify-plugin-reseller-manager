@@ -1,8 +1,8 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-name = "reseller-plugin-new"
-client_id = "174a87b2c7f391cc0475f9d3b9bb36a5"
-application_url = "https://episodes-politicians-scores-dept.trycloudflare.com"
+name = "plugin-reseller"
+client_id = "9d6756a6acbf5c4ec6899f845be8ef8d"
+application_url = "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host"
 embedded = true
 
 [access_scopes]
@@ -11,13 +11,13 @@ scopes = "write_customers,write_products,read_customers,unauthenticated_read_cus
 
 [auth]
 redirect_urls = [
-  "https://episodes-politicians-scores-dept.trycloudflare.com/auth/callback",
-  "https://episodes-politicians-scores-dept.trycloudflare.com/auth/shopify/callback",
-  "https://episodes-politicians-scores-dept.trycloudflare.com/api/auth/callback"
+  "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host/auth/callback",
+  "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host/auth/shopify/callback",
+  "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host/api/auth/callback"
 ]
 
 [webhooks]
-api_version = "2023-10"
+api_version = "2023-07"
 
 [pos]
 embedded = false
