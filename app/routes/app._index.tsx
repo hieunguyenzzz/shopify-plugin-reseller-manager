@@ -36,7 +36,7 @@ async function  getCustomerPage(cursor, query) {
             displayName
             email
             createdAt
-            metafields(first: 40) {
+            metafields(first: 30) {
               edges {
                 node {
                   id
