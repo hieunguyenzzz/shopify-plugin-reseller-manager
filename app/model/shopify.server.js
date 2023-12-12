@@ -62,21 +62,25 @@ export const createCustomer = async (data) => {
             {
               "namespace": "custom-register",
               "key": "trade_account_type",
+              "type": "single_line_text_field",
               "value": "credit"
             },
             {
               "namespace": "custom-register",
               "key": "trade_account_status",
+              "type": "single_line_text_field",
               "value": "2"
             },
             {
               "namespace": "custom-register",
               "key": "details-company-name",
+              "type": "single_line_text_field",
               "value": data["details-company-name"]
             },
             {
               "namespace": "custom-register",
               "key": "details-company-industry",
+              "type": "single_line_text_field",
               "value": data["details-company-industry"]
             },
             {
@@ -88,26 +92,31 @@ export const createCustomer = async (data) => {
             {
               "namespace": "custom-register",
               "key": "details-address",
+              "type": "single_line_text_field",
               "value": data["details-address"]
             },
             {
               "namespace": "custom-register",
               "key": "details-address-2",
+              "type": "single_line_text_field",
               "value": data["details-address-2"]
             },
             {
               "namespace": "custom-register",
               "key": "details-postcode",
+              "type": "single_line_text_field",
               "value": data["details-postcode"]
             },
             {
               "namespace": "custom-register",
               "key": "details-registration-number",
+              "type": "single_line_text_field",
               "value": data["details-registration-number"]
             },
             {
               "namespace": "custom-register",
               "key": "registered-office-address",
+              "type": "single_line_text_field",
               "value": data["registered-office-address"]
             },
             {

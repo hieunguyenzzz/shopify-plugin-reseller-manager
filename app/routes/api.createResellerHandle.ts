@@ -56,6 +56,7 @@ export const action = async ({ request }) => {
   console.log(values);
   let text = '<ul>';
   let result = await createCustomer(values);
+  console.log(result);
   for (const property in values) {
     if (!propertyToLabel[property]) continue;
     text += `<li>${propertyToLabel[property]}: ${values[property]}</li>`
