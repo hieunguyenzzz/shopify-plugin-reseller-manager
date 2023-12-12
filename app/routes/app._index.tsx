@@ -1,13 +1,13 @@
-import { json } from "@remix-run/node";
+import {json, redirect} from "@remix-run/node";
 import {
   Page,
   Layout,
-  Card, IndexTable,
+  Card, IndexTable, useIndexResourceState,
 } from "@shopify/polaris";
 import {
   Link,
   useLoaderData,
-  useNavigate
+  useFetcher,
 } from "@remix-run/react";
 import { authenticate } from "../shopify.server";
 import {
@@ -17,6 +17,7 @@ import {
   METAFIELD_POSTCODE,
   METAFIELD_TRADE_ACCOUNT_STATUS
 } from "~/constant";
+
 
 async function  getCustomerPage(cursor, query) {
   const response = await query(
@@ -56,6 +57,36 @@ async function  getCustomerPage(cursor, query) {
   return customers.data.customers
 }
 
+async function deleteCustomer(id, query) {
+  const response = await query(
+    `#graphql
+    mutation deleteCustomer($input: CustomerDeleteInput!) {
+      customerDelete(input: $input) {
+        deletedCustomerId
+        userErrors {
+          field
+          message
+        }
+      }
+    }`,
+    { variables: {input: { id: id } }}
+  );
+  const customers = await response.json();
+  return customers.data.customers
+}
+
+export async function action({request}) {
+  const { session, admin } = await authenticate.admin(request);
+  const body = await request.text();
+  console.log(decodeURIComponent(body));
+  console.log('bodyyyy',  JSON.parse(decodeURIComponent(body).replace('body=', '')));
+  let customers = JSON.parse(decodeURIComponent(body).replace('body=', ''));
+  for (const customer of customers) {
+    await deleteCustomer(customer, admin.graphql);
+  }
+  return redirect(`/app`);
+}
+
 export const loader = async ({ request }) => {
   const { session, admin } = await authenticate.admin(request);
   let hasNextPage = true;
@@ -88,13 +119,26 @@ export const loader = async ({ request }) => {
 export default function Index() {
 
   const { customers } = useLoaderData();
-
-  console.log(customers);
+  const fetcher = useFetcher();
+  console.log('customers', customers);
 
   const resourceName = {
     singular: "order",
     plural: "orders"
   };
+
+  const {selectedResources, allResourcesSelected, handleSelectionChange} =
+    useIndexResourceState(customers);
+
+  //console.log('selectedResources', selectedResources);
+  const bulkActions = [{
+    content: 'Log actions',
+    onAction: async () => {
+
+      await fetcher.submit({body: JSON.stringify(selectedResources)}, { method: "POST" });
+
+    },
+  }];
 
   return (
     <Page title={"Trade account Manager"}>
@@ -102,7 +146,14 @@ export default function Index() {
       <Layout>
         <Layout.Section>
           <Card padding="0">
-            <IndexTable resourceName={resourceName} headings={[
+            <IndexTable
+              onSelectionChange={handleSelectionChange}
+              resourceName={resourceName}
+              bulkActions={bulkActions}
+              selectedItemsCount={
+                allResourcesSelected ? 'All' : selectedResources.length
+              }
+              headings={[
               { title: "Name" },
               { title: "Email" },
               { title: "Company Name" },
@@ -121,7 +172,7 @@ export default function Index() {
                 let status = metafields.find((metafield) => metafield.node.key === METAFIELD_TRADE_ACCOUNT_STATUS);
 
                 return (
-                  <IndexTable.Row key={customer.id} id={customer.id} position={index}>
+                  <IndexTable.Row key={customer.id} id={customer.id} position={index} selected={selectedResources.includes(customer.id)}>
                     <IndexTable.Cell>
                       <Link to={`trade/${customer.id.replace('gid://shopify/Customer/', '')}`}>
                         {customer.displayName}
