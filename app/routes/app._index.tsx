@@ -133,7 +133,7 @@ export default function Index() {
 
   //console.log('selectedResources', selectedResources);
   const bulkActions = [{
-    content: 'Log actions',
+    content: 'Delete',
     onAction: async () => {
 
       await fetcher.submit({body: JSON.stringify(selectedResources)}, { method: "POST" });
