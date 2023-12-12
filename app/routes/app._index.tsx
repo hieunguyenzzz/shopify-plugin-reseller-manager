@@ -23,7 +23,7 @@ async function  getCustomerPage(cursor, query) {
   const response = await query(
       `#graphql
     query getCustomers($cursor: String) {
-      customers(first: 10, query: "trader" ,after: $cursor) {
+      customers(first: 20, query: "trader" ,after: $cursor, reverse: true) {
         pageInfo {
           startCursor
           endCursor
@@ -36,7 +36,7 @@ async function  getCustomerPage(cursor, query) {
             displayName
             email
             createdAt
-            metafields(first: 50) {
+            metafields(first: 40) {
               edges {
                 node {
                   id
@@ -103,6 +103,7 @@ export const loader = async ({ request }) => {
 
     hasNextPage = customersData.pageInfo.hasNextPage;
     endCursor = customersData.pageInfo.endCursor;
+    break;
   }
 
   return json({
