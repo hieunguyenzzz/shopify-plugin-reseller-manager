@@ -35,6 +35,7 @@ async function  getCustomerPage(cursor, query) {
             id
             displayName
             email
+            createdAt
             metafields(first: 50) {
               edges {
                 node {
@@ -160,6 +161,7 @@ export default function Index() {
               { title: "Company Type" },
               { title: "Address" },
               { title: "Postcode" },
+                { title: "Register Date" },
               { title: "Trade Account Status" },
             ]} itemCount={customers.length}>
               {customers.map((customer, index) => {
@@ -183,6 +185,7 @@ export default function Index() {
                     <IndexTable.Cell>{companyType?.node?.value}</IndexTable.Cell>
                     <IndexTable.Cell>{address?.node?.value}</IndexTable.Cell>
                     <IndexTable.Cell>{postcode?.node?.value}</IndexTable.Cell>
+                    <IndexTable.Cell>{customer.createdAt}</IndexTable.Cell>
                     <IndexTable.Cell>{status?.node?.value === "1" ? 'Approve' : status?.node?.value === "2" ? 'Pending' : 'Decline' }</IndexTable.Cell>
                   </IndexTable.Row>
                 );
