@@ -3,7 +3,7 @@ import { ApolloClient, createHttpLink, gql, InMemoryCache } from "@apollo/client
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: process.env.SHOPIFY_API_URL
+  uri: process.env.SHOPIFY_API_URL || "https://soundboxdev.myshopify.com/admin/api/2023-10/graphql.json"
 });
 
 const authLink = setContext((_, { headers }) => {
