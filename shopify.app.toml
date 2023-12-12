@@ -1,8 +1,8 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-name = "plugin-reseller"
-client_id = "9d6756a6acbf5c4ec6899f845be8ef8d"
-application_url = "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host"
+name = "reseller-plugin"
+client_id = "1523c0c56a71628036f3ca94863120fc"
+application_url = "https://shopify-plugin-reseller-manager.hieunguyen.dev"
 embedded = true
 
 [access_scopes]
@@ -11,13 +11,13 @@ scopes = "write_customers,write_products,read_customers,unauthenticated_read_cus
 
 [auth]
 redirect_urls = [
-  "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host/auth/callback",
-  "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host/auth/shopify/callback",
-  "https://soundboxstore-shopify-plugin-trade-customer-manager.x67nf4.easypanel.host/api/auth/callback"
+  "https://shopify-plugin-reseller-manager.hieunguyen.dev/auth/callback",
+  "https://shopify-plugin-reseller-manager.hieunguyen.dev/auth/shopify/callback",
+  "https://shopify-plugin-reseller-manager.hieunguyen.dev/api/auth/callback"
 ]
 
 [webhooks]
-api_version = "2023-07"
+api_version = "2023-10"
 
 [pos]
 embedded = false
