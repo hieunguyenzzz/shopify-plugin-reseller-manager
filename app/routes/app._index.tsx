@@ -1,4 +1,4 @@
-import {json, redirect} from "@remix-run/node";
+import {ActionFunctionArgs, json, LoaderFunctionArgs, redirect} from "@remix-run/node";
 import {
   Page,
   Layout,
@@ -8,8 +8,8 @@ import {
   Link,
   useLoaderData,
   useFetcher,
-} from "@remix-run/react";
-import { authenticate } from "../shopify.server";
+ useNavigate } from "@remix-run/react";
+import { authenticate } from "~/shopify.server";
 import {
   METAFIELD_ADDRESS,
   METAFIELD_COMPANY_NAME,
@@ -18,7 +18,6 @@ import {
   METAFIELD_TRADE_ACCOUNT_STATUS
 } from "~/constant";
 import {useEffect, useState} from "react";
-import { useNavigate } from "@remix-run/react";
 
 async function  getCustomerPage(cursor, query) {
   console.log('get customer page', cursor);
@@ -79,7 +78,7 @@ async function deleteCustomer(id, query) {
   return customers.data.customers
 }
 
-export async function action({request}) {
+export async function action({ request }: ActionFunctionArgs) {
   const { admin } = await authenticate.admin(request);
   const body = await request.text();
   let customers = JSON.parse(decodeURIComponent(body).replace('body=', ''));
@@ -89,8 +88,10 @@ export async function action({request}) {
   return redirect(`/app`);
 }
 
-export const loader = async ({ request }) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
   const { session, admin } = await authenticate.admin(request);
+  let cursor = await request.text();
+  console.log('cursor', cursor);
   let hasNextPage = true;
   let hasPreviousPage = false;
   let endCursor = null;
@@ -126,7 +127,7 @@ export const loader = async ({ request }) => {
 export default function Index() {
   console.log('start rendering');
   const navigation = useNavigate();
-  const { customers, hasNextPage, nextPageCursor, hasPreviousPage } = useLoaderData();
+  const { customers, hasNextPage, nextPageCursor, hasPreviousPage } = useLoaderData<typeof loader>();
   const fetcher = useFetcher();
   const [pageInfo, setPageInfo] = useState({hasNextPage: hasNextPage, hasPreviousPage: hasPreviousPage})
   const [cursor, setCursor] = useState('');
