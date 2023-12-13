@@ -17,17 +17,20 @@ import {
   METAFIELD_POSTCODE,
   METAFIELD_TRADE_ACCOUNT_STATUS
 } from "~/constant";
-
+import {useEffect, useState} from "react";
+import { useNavigate } from "@remix-run/react";
 
 async function  getCustomerPage(cursor, query) {
+  console.log('get customer page', cursor);
   const response = await query(
       `#graphql
     query getCustomers($cursor: String) {
-      customers(first: 20, query: "trader" ,after: $cursor, reverse: true) {
+      customers(first: 5, query: "trader" ,after: $cursor, reverse: true) {
         pageInfo {
           startCursor
           endCursor
           startCursor
+          hasPreviousPage
           hasNextPage
         }
         edges {
@@ -77,10 +80,8 @@ async function deleteCustomer(id, query) {
 }
 
 export async function action({request}) {
-  const { session, admin } = await authenticate.admin(request);
+  const { admin } = await authenticate.admin(request);
   const body = await request.text();
-  console.log(decodeURIComponent(body));
-  console.log('bodyyyy',  JSON.parse(decodeURIComponent(body).replace('body=', '')));
   let customers = JSON.parse(decodeURIComponent(body).replace('body=', ''));
   for (const customer of customers) {
     await deleteCustomer(customer, admin.graphql);
@@ -91,6 +92,7 @@ export async function action({request}) {
 export const loader = async ({ request }) => {
   const { session, admin } = await authenticate.admin(request);
   let hasNextPage = true;
+  let hasPreviousPage = false;
   let endCursor = null;
   const allCustomers = [];
 
@@ -98,11 +100,11 @@ export const loader = async ({ request }) => {
 
     const customersData = await getCustomerPage(endCursor, admin.graphql);
     const customers = customersData.edges.map((edge) => edge.node);
-    console.log(customersData.pageInfo.startCursor);
     allCustomers.push(...customers);
 
     hasNextPage = customersData.pageInfo.hasNextPage;
     endCursor = customersData.pageInfo.endCursor;
+    hasPreviousPage = customersData.pageInfo.hasPreviousPage;
     break;
   }
 
@@ -114,20 +116,29 @@ export const loader = async ({ request }) => {
 
       // Compare dates in descending order (more recent dates first)
       return dateB.getTime() - dateA.getTime();
-    })
+    },),
+    hasNextPage: hasNextPage,
+    nextPageCursor: endCursor,
+    hasPreviousPage: hasPreviousPage,
   });
 };
 
 export default function Index() {
-
-  const { customers } = useLoaderData();
+  console.log('start rendering');
+  const navigation = useNavigate();
+  const { customers, hasNextPage, nextPageCursor, hasPreviousPage } = useLoaderData();
   const fetcher = useFetcher();
-  console.log('customers', customers);
+  const [pageInfo, setPageInfo] = useState({hasNextPage: hasNextPage, hasPreviousPage: hasPreviousPage})
+  const [cursor, setCursor] = useState('');
 
   const resourceName = {
     singular: "order",
     plural: "orders"
   };
+
+  useEffect(() => {
+    console.log('done rendering');
+  }, [cursor]);
 
   const {selectedResources, allResourcesSelected, handleSelectionChange} =
     useIndexResourceState(customers);
@@ -155,6 +166,16 @@ export default function Index() {
               selectedItemsCount={
                 allResourcesSelected ? 'All' : selectedResources.length
               }
+              pagination={{
+                hasNext: pageInfo.hasNextPage,
+                hasPrevious: pageInfo.hasPreviousPage,
+                onNext: () => {
+                  console.log('nextPageCursor', nextPageCursor);
+                  setCursor(nextPageCursor);
+                  // write a code to reload the current page with param cursor
+                  navigation(`/app?cursor=${nextPageCursor}`, { replace: true });
+                },
+              }}
               headings={[
               { title: "Name" },
               { title: "Email" },
