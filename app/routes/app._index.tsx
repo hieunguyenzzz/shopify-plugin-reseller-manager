@@ -149,6 +149,9 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   allCustomers.push(...customers);
 
   return json({
+    context: {
+      debug: process.env.DEBUG
+    },
     id: endCursor || 'start',
     endCursor,
     shop: session.shop.replace(".myshopify.com", ""),
@@ -165,9 +168,11 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 
 export default function Index() {
   console.log('start rendering');
+
   const navigation = useNavigate();
   const { state } = useNavigation();
-  const { customers, hasNextPage, nextPageCursor, hasPreviousPage, id, pageInfo } = useLoaderData<typeof loader>();
+  const dataLoader = useLoaderData<typeof loader>();
+  const { customers, hasNextPage, nextPageCursor, hasPreviousPage, id, pageInfo, context } = dataLoader;
   const fetcher = useFetcher();
   const resourceName = {
     singular: "order",
@@ -259,10 +264,10 @@ export default function Index() {
           </Layout.Section>
         </Layout>
 
-        {process.env.DEBUG && <Card>
+        {(context.debug || localStorage.getItem('debug')) && <Card>
           <pre>
             {
-              JSON.stringify({ id, state, pageInfo, customers, hasNextPage, nextPageCursor, hasPreviousPage, id }, null, 2)
+              JSON.stringify(dataLoader, null, 2)
             }
           </pre>
         </Card>}
