@@ -27,7 +27,7 @@ async function getCustomerPage(cursor, query) {
   const response = await query(
     `#graphql
     query getCustomers($cursor: String) {
-      customers(first: 5, query: "trader" ,after: $cursor, reverse: true) {
+      customers(first: 20, query: "trader" ,after: $cursor, reverse: true) {
         pageInfo {
           startCursor
           endCursor
@@ -70,7 +70,7 @@ async function getCustomerPagePre(cursor, query) {
   const response = await query(
     `#graphql
     query getCustomers($cursor: String) {
-      customers(last: 5, query: "trader" ,before: $cursor, reverse: true) {
+      customers(last: 20, query: "trader" ,before: $cursor, reverse: true) {
         pageInfo {
           startCursor
           endCursor
@@ -142,7 +142,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   const startCursor = new URL(request.url).searchParams.get('startCursor');
 
   const allCustomers = [];
-  const customersData = endCursor
+  const customersData = !startCursor
     ? await getCustomerPage(endCursor, admin.graphql)
     : await getCustomerPagePre(startCursor, admin.graphql);
   const customers = customersData.edges.map((edge) => edge.node);
@@ -264,7 +264,7 @@ export default function Index() {
           </Layout.Section>
         </Layout>
 
-        {(context.debug || localStorage.getItem('debug')) && <Card>
+        {context.debug &&<Card>
           <pre>
             {
               JSON.stringify(dataLoader, null, 2)
