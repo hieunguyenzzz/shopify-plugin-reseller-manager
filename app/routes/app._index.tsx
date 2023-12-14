@@ -224,12 +224,13 @@ export default function Index() {
                 }}
                 headings={[
                   { title: "Name" },
+                  { title: "Register Date" },
                   { title: "Email" },
                   { title: "Company Name" },
                   { title: "Company Type" },
                   { title: "Address" },
                   { title: "Postcode" },
-                  { title: "Register Date" },
+
                   { title: "Trade Account Status" },
                 ]} itemCount={customers.length}>
                 {customers.map((customer, index) => {
@@ -249,11 +250,11 @@ export default function Index() {
                         </Link>
                       </IndexTable.Cell>
                       <IndexTable.Cell>{customer.email}</IndexTable.Cell>
+                      <IndexTable.Cell>{customer.createdAt}</IndexTable.Cell>
                       <IndexTable.Cell>{companyName?.node?.value}</IndexTable.Cell>
                       <IndexTable.Cell>{companyType?.node?.value}</IndexTable.Cell>
                       <IndexTable.Cell>{address?.node?.value}</IndexTable.Cell>
                       <IndexTable.Cell>{postcode?.node?.value}</IndexTable.Cell>
-                      <IndexTable.Cell>{customer.createdAt}</IndexTable.Cell>
                       <IndexTable.Cell>{status?.node?.value === "1" ? 'Approve' : status?.node?.value === "2" ? 'Pending' : 'Decline'}</IndexTable.Cell>
                     </IndexTable.Row>
                   );
