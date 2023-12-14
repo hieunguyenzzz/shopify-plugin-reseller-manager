@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "reseller-plugin-dev"
+client_id = "d461d211ef20f874694d1aae57c19c9c"
+application_url = "https://listed-stopped-perceived-capabilities.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_customers,write_products,read_customers,unauthenticated_read_customers,unauthenticated_write_customers"
+
+[auth]
+redirect_urls = [
+  "https://listed-stopped-perceived-capabilities.trycloudflare.com/auth/callback",
+  "https://listed-stopped-perceived-capabilities.trycloudflare.com/auth/shopify/callback",
+  "https://listed-stopped-perceived-capabilities.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "soundboxdev.myshopify.com"
