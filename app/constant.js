@@ -226,7 +226,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="10" cellspacing="0" class="paragraph_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
 <tr>
 <td class="pad">
-<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:120%;text-align:center;mso-line-height-alt:39.6px;">
+<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:150%;text-align:center;mso-line-height-alt:39.6px;">
 <p style="margin: 0; margin-bottom: 2px;">Congratulations!</p>
 <p style="margin: 0; margin-bottom: 2px;">You are now a reseller of</p>
 <p style="margin: 0;">Soundbox store!</p>
@@ -328,7 +328,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
+<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
 </td>
 </tr>
 </table>
@@ -360,7 +360,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
 </td>
 </tr>
 </table>
@@ -378,7 +378,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
 </td>
 </tr>
 </table>
@@ -396,7 +396,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
 </td>
 </tr>
 </table>
@@ -414,7 +414,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
 </td>
 </tr>
 </table>
@@ -779,7 +779,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="40" cellspacing="0" class="paragraph_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
 <tr>
 <td class="pad">
-<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:120%;text-align:center;mso-line-height-alt:39.6px;">
+<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:150%;text-align:center;mso-line-height-alt:39.6px;">
 <p style="margin: 0;">Hey partner thank you for requesting a reseller account, we will be back with you shortly.</p>
 </div>
 </td>
@@ -875,7 +875,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
+<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
 </td>
 </tr>
 </table>
@@ -907,7 +907,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
 </td>
 </tr>
 </table>
@@ -925,7 +925,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
 </td>
 </tr>
 </table>
@@ -943,7 +943,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
 </td>
 </tr>
 </table>
@@ -961,7 +961,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
 </td>
 </tr>
 </table>
