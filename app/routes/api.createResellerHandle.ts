@@ -63,8 +63,8 @@ export const action = async ({ request }) => {
   }
   text += '</ul>';
   await sendEmail({
-    to: "james.low@soundboxstore.com",
-    from: "customersupport@soundboxstore.com",
+    to: "showroom@soundboxstore.com",
+    from: "hush@soundboxstore.com",
     subject: "Trade Account Application",
     html: "new trade account request received: <br > " + text + "<br >" + "<a href='https://admin.shopify.com/store/thankyou-485/apps/plugin-reseller/app'>Cick here</a> for full list of reseller"
   });
