@@ -352,7 +352,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://files.soundboxstore.com/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -370,7 +370,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Plug & play" src="https://files.soundboxstore.com/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Plug & play" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -388,7 +388,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://files.soundboxstore.com/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -406,7 +406,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Movable" src="https://files.soundboxstore.com/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Movable" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -466,10 +466,10 @@ export const APPROVAL_HTML = `
 <div align="center" class="alignment">
 <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="148px">
 <tr>
-<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
 </tr>
 </table>
 </div>
@@ -752,7 +752,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="padding-bottom:10px;width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 251px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://files.soundboxstore.com/images/SBS-new-logo.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="251"/></a></div>
+<div style="max-width: 251px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/SBS-new-logo.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="251"/></a></div>
 </div>
 </td>
 </tr>
@@ -899,7 +899,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://files.soundboxstore.com/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -917,7 +917,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Plug & play" src="https://files.soundboxstore.com/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Plug & play" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -935,7 +935,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://files.soundboxstore.com/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -953,7 +953,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Movable" src="https://files.soundboxstore.com/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Movable" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -1002,7 +1002,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 53px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://files.soundboxstore.com/images/SBS-new-logo-icon.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="53"/></a></div>
+<div style="max-width: 53px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/SBS-new-logo-icon.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="53"/></a></div>
 </div>
 </td>
 </tr>
@@ -1013,10 +1013,10 @@ export const CONFIRMATION_HTML = `
 <div align="center" class="alignment">
 <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="148px">
 <tr>
-<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
 </tr>
 </table>
 </div>
