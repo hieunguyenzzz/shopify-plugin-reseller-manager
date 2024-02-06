@@ -2,7 +2,7 @@
 
 name = "reseller-plugin-dev"
 client_id = "d461d211ef20f874694d1aae57c19c9c"
-application_url = "https://hometown-disagree-fa-carlo.trycloudflare.com"
+application_url = "https://nano-greece-rca-youth.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_customers,write_products,read_customers,unauthenticated_read_cus
 
 [auth]
 redirect_urls = [
-  "https://hometown-disagree-fa-carlo.trycloudflare.com/auth/callback",
-  "https://hometown-disagree-fa-carlo.trycloudflare.com/auth/shopify/callback",
-  "https://hometown-disagree-fa-carlo.trycloudflare.com/api/auth/callback"
+  "https://nano-greece-rca-youth.trycloudflare.com/auth/callback",
+  "https://nano-greece-rca-youth.trycloudflare.com/auth/shopify/callback",
+  "https://nano-greece-rca-youth.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

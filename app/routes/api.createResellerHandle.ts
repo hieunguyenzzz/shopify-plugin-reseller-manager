@@ -54,6 +54,10 @@ export const action = async ({ request }) => {
 
   const values = await request.json() as PostDataInterface;
   console.log(values);
+  fetch('https://hooks.zapier.com/hooks/catch/14043376/3qfwwl8/', {
+    method: "POST",
+    body: JSON.stringify(values)
+  })
   let text = '<ul>';
   let result = await createCustomer(values);
   console.log(result);
@@ -77,7 +81,7 @@ export const action = async ({ request }) => {
   });
 
   console.log(result.data.customerCreate.userErrors);
-  return json({ message: "Hello, world!"}, {
+  return json({ message: "Hello, world!" }, {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
@@ -85,7 +89,7 @@ export const action = async ({ request }) => {
 };
 
 export function loader() {
-  return json({ message: "Hello, world!"}, {
+  return json({ message: "Hello, world!" }, {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "*"
