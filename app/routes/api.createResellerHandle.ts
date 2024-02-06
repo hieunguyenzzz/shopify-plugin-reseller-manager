@@ -57,7 +57,9 @@ export const action = async ({ request }) => {
   fetch('https://hooks.zapier.com/hooks/catch/14043376/3qfwwl8/', {
     method: "POST",
     body: JSON.stringify(values)
-  })
+  }).then(res => {
+    return res.text()
+  }).then(console.log)
   let text = '<ul>';
   let result = await createCustomer(values);
   console.log(result);
