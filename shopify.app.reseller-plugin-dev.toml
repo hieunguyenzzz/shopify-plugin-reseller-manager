@@ -1,19 +1,23 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-application_url = "https://bear-cheers-institute-infinite.trycloudflare.com"
 client_id = "d461d211ef20f874694d1aae57c19c9c"
-embedded = true
 name = "reseller-plugin-dev"
+application_url = "https://flights-apparatus-translate-delaware.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "soundboxdev.myshopify.com"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_customers,write_products,read_customers,unauthenticated_read_customers,unauthenticated_write_customers"
+scopes = "read_customers,unauthenticated_read_customers,unauthenticated_write_customers,write_customers,write_products"
 
 [auth]
 redirect_urls = [
-  "https://bear-cheers-institute-infinite.trycloudflare.com/auth/callback",
-  "https://bear-cheers-institute-infinite.trycloudflare.com/auth/shopify/callback",
-  "https://bear-cheers-institute-infinite.trycloudflare.com/api/auth/callback",
+  "https://flights-apparatus-translate-delaware.trycloudflare.com/auth/callback",
+  "https://flights-apparatus-translate-delaware.trycloudflare.com/auth/shopify/callback",
+  "https://flights-apparatus-translate-delaware.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
@@ -21,7 +25,3 @@ api_version = "2023-10"
 
 [pos]
 embedded = false
-
-[build]
-automatically_update_urls_on_dev = true
-dev_store_url = "soundboxdev.myshopify.com"

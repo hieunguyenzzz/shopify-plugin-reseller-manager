@@ -1,20 +1,15 @@
-import { useState } from "react";
-import { authenticate } from "~/shopify.server";
 import { json, redirect } from "@remix-run/node";
-import { getReseller, updateReseller } from "~/model/reseller.server";
-import { useActionData, useLoaderData, useNavigate, useNavigation, useSubmit } from "@remix-run/react";
+import { useActionData, useLoaderData, useNavigation, useSubmit } from "@remix-run/react";
 import {
-  Card,
-
   BlockStack,
-  InlineError,
+  Card,
   Layout,
   Page,
+  PageActions, Select,
   Text,
-  TextField,
-  Thumbnail,
-  PageActions, Select
+  TextField
 } from "@shopify/polaris";
+import { useState } from "react";
 import {
   APPROVAL_HTML,
   METAFIELD_ADDRESS,
@@ -48,8 +43,10 @@ import {
   METAFIELD_TRADE_REFERENCE_POSTCODE,
   METAFIELD_TRADE_REFERENCE_TELEPHONE
 } from "~/constant";
+import { getReseller, updateReseller } from "~/model/reseller.server";
 import { sendEmail } from "~/model/sendgrid.server";
 import { createActivationUrl } from "~/model/shopify.server";
+import { authenticate } from "~/shopify.server";
 
 export async function loader({ request, params }) {
 
@@ -71,15 +68,18 @@ export async function loader({ request, params }) {
 export async function action({ request, params }) {
   const { session, admin } = await authenticate.admin(request);
   const { shop } = session;
-  let body = await request.text();
+  let data = await request.json();
 
-  /** @type {any} */
-  const data = {
-    ...JSON.parse(body),
-    shop
-  };
+  // /** @type {any} */
+  // const data = {
+  //   ...JSON.parse(body),
+  //   shop
+  // };
 
   // send email to customer
+  if (data.action === "delete") {
+    return redirect(`/app`);
+  }
   let tradeStatus = data.metafields.find((node) => node.key === METAFIELD_TRADE_ACCOUNT_STATUS);
   let activationUrlData = await createActivationUrl(data.id);
   console.log(activationUrlData);
@@ -124,12 +124,9 @@ export async function action({ request, params }) {
 export default function resellerForm() {
   const reseller = useLoaderData();
   const errors = useActionData()?.errors || {};
-  const actionData = useActionData();
-
   const [formState, setFormState] = useState(reseller);
   const [cleanFormState, setCleanFormState] = useState(reseller);
   const isDirty = JSON.stringify(formState) !== JSON.stringify(cleanFormState);
-  const navigate = useNavigate();
   const nav = useNavigation();
 
   const isSaving =
@@ -177,12 +174,15 @@ export default function resellerForm() {
 
 
   return (
-    <Page>
-      <ui-title-bar title={reseller.id ? "Edit Reseller" : "Create new reseller"}>
-        <button variant="breadcrumb" onClick={() => navigate("/app")}>
-          Manage Resellers
-        </button>
-      </ui-title-bar>
+    <Page title="Editting" backAction={{
+      url: "/app",
+    }} primaryAction={{
+      content: "Save",
+      loading: isSaving,
+      disabled: !isDirty || isSaving || isDeleting,
+      onAction: handleSave
+    }}>
+
       <Layout>
         <Layout.Section>
           <BlockStack gap="500">
@@ -234,7 +234,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_NAME)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== METAFIELD_COMPANY_NAME), {
                         id: company.id,
@@ -258,7 +259,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_INDUSTRY)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== METAFIELD_COMPANY_INDUSTRY), {
                         id: company.id,
@@ -282,7 +284,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_ADDRESS)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -306,7 +309,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_ADDRESS2)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -330,7 +334,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_POSTCODE)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -354,7 +359,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_TYPE)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -378,7 +384,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_NUMBER)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -402,7 +409,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_ADDRESS)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -426,7 +434,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_TELEPHONE)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -450,7 +459,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_FAX)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -474,7 +484,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_EMAIL)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -498,7 +509,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_PURCHASE_CONTACT)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -522,7 +534,8 @@ export default function resellerForm() {
                   disabled={true}
                   autoComplete="off"
                   value={findMetafield(METAFIELD_COMPANY_ACCOUNT_CONTACT)?.value}
-                  onChange={(company_name) => setFormState({ ...formState,
+                  onChange={(company_name) => setFormState({
+                    ...formState,
                     metafields: {
                       nodes: [...metafields.filter(m => m.key !== "company_name"), {
                         id: company.id,
@@ -731,7 +744,8 @@ export default function resellerForm() {
                 name={METAFIELD_TRADE_ACCOUNT_STATUS}
                 label="Status"
                 options={statusOption}
-                onChange={(value) => setFormState({ ...formState,
+                onChange={(value) => setFormState({
+                  ...formState,
                   metafields: {
                     nodes: [...metafields.filter(m => m.key !== METAFIELD_TRADE_ACCOUNT_STATUS), {
                       id: findMetafield(METAFIELD_TRADE_ACCOUNT_STATUS)?.id,
@@ -757,7 +771,7 @@ export default function resellerForm() {
                 destructive: true,
                 outline: true,
                 onAction: () =>
-                  submit({ action: "delete" }, { method: "post" })
+                  submit({ action: "delete" }, { method: "post", encType: "application/json", })
               }
             ]}
             primaryAction={{

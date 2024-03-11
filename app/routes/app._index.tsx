@@ -4,7 +4,8 @@ import {
   useFetcher,
   useLoaderData,
   useNavigate,
-  useNavigation
+  useNavigation,
+  useSearchParams
 } from "@remix-run/react";
 import {
   Badge,
@@ -14,7 +15,7 @@ import {
   Page,
   useIndexResourceState,
 } from "@shopify/polaris";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   METAFIELD_ADDRESS,
   METAFIELD_COMPANY_NAME,
@@ -23,13 +24,19 @@ import {
   METAFIELD_TRADE_ACCOUNT_STATUS
 } from "~/constant";
 import { authenticate } from "~/shopify.server";
-
-async function getCustomerPage(cursor, query) {
+const buildQueryString = (s: String) => {
+  if (!s) return `tag:trader`
+  return `tag:trader AND ${s}`
+}
+async function getCustomerPage({
+  cursor, query
+}, graphql) {
   console.log('get customer page', cursor);
-  const response = await query(
+
+  const response = await graphql(
     `#graphql
-    query getCustomers($cursor: String) {
-      customers(first: 20, query: "trader" ,after: $cursor, reverse: true) {
+    query getCustomers($cursor: String,$query: String) {
+      customers(first: 20, query: $query,after: $cursor, reverse: true) {
         pageInfo {
           startCursor
           endCursor
@@ -59,7 +66,7 @@ async function getCustomerPage(cursor, query) {
         }
       }
     }`,
-    { variables: { cursor: cursor } }
+    { variables: { cursor: cursor, query: buildQueryString(query) } }
   );
 
   const customers = await response.json();
@@ -67,12 +74,14 @@ async function getCustomerPage(cursor, query) {
 
   return customers.data.customers
 }
-async function getCustomerPagePre(cursor, query) {
+async function getCustomerPagePre({
+  cursor, query
+}, graphql) {
   console.log('get customer page', cursor);
-  const response = await query(
+  const response = await graphql(
     `#graphql
-    query getCustomers($cursor: String) {
-      customers(last: 20, query: "trader" ,before: $cursor, reverse: true) {
+    query getCustomers($cursor: String,$query: String) {
+      customers(last: 20, query: $query ,before: $cursor, reverse: true) {
         pageInfo {
           startCursor
           endCursor
@@ -102,7 +111,7 @@ async function getCustomerPagePre(cursor, query) {
         }
       }
     }`,
-    { variables: { cursor: cursor } }
+    { variables: { cursor: cursor, query: buildQueryString(query) } }
   );
 
   const customers = await response.json();
@@ -142,11 +151,17 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
   const { session, admin } = await authenticate.admin(request);
   const endCursor = new URL(request.url).searchParams.get('endCursor');
   const startCursor = new URL(request.url).searchParams.get('startCursor');
-
+  const query = new URL(request.url).searchParams.get('query');
   const allCustomers = [];
   const customersData = !startCursor
-    ? await getCustomerPage(endCursor, admin.graphql)
-    : await getCustomerPagePre(startCursor, admin.graphql);
+    ? await getCustomerPage({
+      cursor: endCursor,
+      query: query
+    }, admin.graphql)
+    : await getCustomerPagePre({
+      cursor: startCursor,
+      query: query
+    }, admin.graphql);
   const customers = customersData.edges.map((edge) => edge.node);
   allCustomers.push(...customers);
 
@@ -169,12 +184,11 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 };
 
 export default function Index() {
-  console.log('start rendering');
 
   const navigation = useNavigate();
   const { state } = useNavigation();
   const dataLoader = useLoaderData<typeof loader>();
-  const { customers, hasNextPage, nextPageCursor, hasPreviousPage, id, pageInfo, context } = dataLoader;
+  const { customers, id, pageInfo, context } = dataLoader;
   const fetcher = useFetcher();
   const resourceName = {
     singular: "order",
@@ -190,7 +204,24 @@ export default function Index() {
       await fetcher.submit({ body: JSON.stringify(selectedResources) }, { method: "POST" });
     },
   }];
-  const [mode, setMode] = useState(IndexFiltersMode.Default);
+  const [queryValue, setQueryValue] = useState('');
+  const handleClearAll = () => {
+    setQueryValue('');
+  }
+  const [searchParams, setSearchParams] = useSearchParams();
+  useEffect(() => {
+    const timmer = setTimeout(() => {
+      if (queryValue) {
+        setSearchParams({ query: queryValue });
+      } else {
+        setSearchParams({});
+      }
+    }, 1000);
+    return () => {
+      clearTimeout(timmer);
+    }
+  }, [queryValue]);
+
   return (
     <Frame>
       {state === 'loading' && <Loading />}
@@ -199,12 +230,12 @@ export default function Index() {
           <Layout.Section>
             <Card padding="0">
               <IndexFilters
-                queryValue={''}
+                queryValue={queryValue}
                 queryPlaceholder="Searching in all"
-                onQueryChange={console.log}
-                onQueryClear={console.log}
+                onQueryChange={setQueryValue}
+                onQueryClear={handleClearAll}
                 cancelAction={{
-                  onAction: console.log,
+                  onAction: handleClearAll,
                   disabled: false,
                   loading: false,
                 }}
@@ -214,16 +245,16 @@ export default function Index() {
                 canCreateNewView
                 filters={[]}
                 appliedFilters={[]}
-                onClearAll={console.log}
-                mode={mode}
-                setMode={setMode}
+                onClearAll={handleClearAll}
+                mode={IndexFiltersMode.Filtering}
+                setMode={handleClearAll}
+
               />
               <IndexTable
                 key={id}
                 lastColumnSticky
                 loading={(() => {
                   let res = state === 'loading'
-                  console.log('loading', res);
                   return res;
                 })()}
                 onSelectionChange={handleSelectionChange}
@@ -245,18 +276,16 @@ export default function Index() {
                 }}
                 headings={[
                   { title: "Name" },
-                  { title: "Register Date" },
                   { title: "Email" },
+                  // { title: "Register Date" },
                   { title: "Company Name" },
                   { title: "Company Type" },
                   { title: "Address" },
                   { title: "Postcode" },
-
                   { title: "Trade Account Status" },
                 ]} itemCount={customers.length}>
                 {customers.map((customer, index) => {
                   let metafields = customer.metafields.edges;
-
                   let companyType = metafields.find((metafield) => metafield.node.key === METAFIELD_COMPANY_TYPE);
                   let companyName = metafields.find((metafield) => metafield.node.key === METAFIELD_COMPANY_NAME);
                   let postcode = metafields.find((metafield) => metafield.node.key === METAFIELD_POSTCODE);
@@ -271,7 +300,7 @@ export default function Index() {
                         </Link>
                       </IndexTable.Cell>
                       <IndexTable.Cell>{customer.email}</IndexTable.Cell>
-                      <IndexTable.Cell>{customer.createdAt}</IndexTable.Cell>
+                      {/* <IndexTable.Cell>{customer.createdAt}</IndexTable.Cell> */}
                       <IndexTable.Cell>{companyName?.node?.value}</IndexTable.Cell>
                       <IndexTable.Cell>{companyType?.node?.value}</IndexTable.Cell>
                       <IndexTable.Cell>{address?.node?.value}</IndexTable.Cell>
