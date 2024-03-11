@@ -7,12 +7,14 @@ import {
   useNavigation
 } from "@remix-run/react";
 import {
-  Card, Frame, IndexTable,
+  Badge,
+  Card, Frame, IndexFilters, IndexFiltersMode, IndexTable,
   Layout,
   Loading,
   Page,
   useIndexResourceState,
 } from "@shopify/polaris";
+import { useState } from "react";
 import {
   METAFIELD_ADDRESS,
   METAFIELD_COMPANY_NAME,
@@ -185,12 +187,10 @@ export default function Index() {
   const bulkActions = [{
     content: 'Delete',
     onAction: async () => {
-
       await fetcher.submit({ body: JSON.stringify(selectedResources) }, { method: "POST" });
-
     },
   }];
-
+  const [mode, setMode] = useState(IndexFiltersMode.Default);
   return (
     <Frame>
       {state === 'loading' && <Loading />}
@@ -198,8 +198,29 @@ export default function Index() {
         <Layout>
           <Layout.Section>
             <Card padding="0">
+              <IndexFilters
+                queryValue={''}
+                queryPlaceholder="Searching in all"
+                onQueryChange={console.log}
+                onQueryClear={console.log}
+                cancelAction={{
+                  onAction: console.log,
+                  disabled: false,
+                  loading: false,
+                }}
+                tabs={[]}
+                selected={0}
+                onSelect={console.log}
+                canCreateNewView
+                filters={[]}
+                appliedFilters={[]}
+                onClearAll={console.log}
+                mode={mode}
+                setMode={setMode}
+              />
               <IndexTable
                 key={id}
+                lastColumnSticky
                 loading={(() => {
                   let res = state === 'loading'
                   console.log('loading', res);
@@ -255,7 +276,7 @@ export default function Index() {
                       <IndexTable.Cell>{companyType?.node?.value}</IndexTable.Cell>
                       <IndexTable.Cell>{address?.node?.value}</IndexTable.Cell>
                       <IndexTable.Cell>{postcode?.node?.value}</IndexTable.Cell>
-                      <IndexTable.Cell>{status?.node?.value === "1" ? 'Approve' : status?.node?.value === "2" ? 'Pending' : 'Decline'}</IndexTable.Cell>
+                      <IndexTable.Cell>{status?.node?.value === "1" ? <Badge tone="success" progress="complete">Approve</Badge> : status?.node?.value === "2" ? <Badge progress="partiallyComplete">Pending</Badge> : <Badge tone="critical" progress="incomplete">Decline</Badge>}</IndexTable.Cell>
                     </IndexTable.Row>
                   );
                 })}
@@ -265,7 +286,7 @@ export default function Index() {
           </Layout.Section>
         </Layout>
 
-        {context.debug &&<Card>
+        {context.debug && <Card>
           <pre>
             {
               JSON.stringify(dataLoader, null, 2)
