@@ -54,6 +54,12 @@ export const action = async ({ request }) => {
 
   const values = await request.json() as PostDataInterface;
   console.log(values);
+  fetch('https://hooks.zapier.com/hooks/catch/14043376/3qfwwl8/', {
+    method: "POST",
+    body: JSON.stringify(values)
+  }).then(res => {
+    return res.text()
+  }).then(console.log)
   let text = '<ul>';
   let result = await createCustomer(values);
   console.log(result);
@@ -63,8 +69,8 @@ export const action = async ({ request }) => {
   }
   text += '</ul>';
   await sendEmail({
-    to: "james.low@soundboxstore.com",
-    from: "customersupport@soundboxstore.com",
+    to: "showroom@soundboxstore.com",
+    from: "hush@soundboxstore.com",
     subject: "Trade Account Application",
     html: "new trade account request received: <br > " + text + "<br >" + "<a href='https://admin.shopify.com/store/thankyou-485/apps/plugin-reseller/app'>Cick here</a> for full list of reseller"
   });
@@ -77,7 +83,7 @@ export const action = async ({ request }) => {
   });
 
   console.log(result.data.customerCreate.userErrors);
-  return json({ message: "Hello, world!"}, {
+  return json({ message: "Hello, world!" }, {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
@@ -85,7 +91,7 @@ export const action = async ({ request }) => {
 };
 
 export function loader() {
-  return json({ message: "Hello, world!"}, {
+  return json({ message: "Hello, world!" }, {
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "*"

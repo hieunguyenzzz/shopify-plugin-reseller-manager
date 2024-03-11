@@ -226,7 +226,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="10" cellspacing="0" class="paragraph_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
 <tr>
 <td class="pad">
-<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:120%;text-align:center;mso-line-height-alt:39.6px;">
+<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:150%;text-align:center;mso-line-height-alt:39.6px;">
 <p style="margin: 0; margin-bottom: 2px;">Congratulations!</p>
 <p style="margin: 0; margin-bottom: 2px;">You are now a reseller of</p>
 <p style="margin: 0;">Soundbox store!</p>
@@ -328,7 +328,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
+<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
 </td>
 </tr>
 </table>
@@ -352,7 +352,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://files.soundboxstore.com/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -360,7 +360,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
 </td>
 </tr>
 </table>
@@ -370,7 +370,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Plug & play" src="https://files.soundboxstore.com/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Plug & play" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -378,7 +378,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
 </td>
 </tr>
 </table>
@@ -388,7 +388,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://files.soundboxstore.com/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -396,7 +396,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
 </td>
 </tr>
 </table>
@@ -406,7 +406,7 @@ export const APPROVAL_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Movable" src="https://files.soundboxstore.com/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Movable" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -414,7 +414,7 @@ export const APPROVAL_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
 </td>
 </tr>
 </table>
@@ -466,10 +466,10 @@ export const APPROVAL_HTML = `
 <div align="center" class="alignment">
 <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="148px">
 <tr>
-<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
 </tr>
 </table>
 </div>
@@ -752,7 +752,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="padding-bottom:10px;width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 251px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://files.soundboxstore.com/images/SBS-new-logo.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="251"/></a></div>
+<div style="max-width: 251px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/SBS-new-logo.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="251"/></a></div>
 </div>
 </td>
 </tr>
@@ -779,7 +779,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="40" cellspacing="0" class="paragraph_block block-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
 <tr>
 <td class="pad">
-<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:120%;text-align:center;mso-line-height-alt:39.6px;">
+<div style="color:#fbfbfb;direction:ltr;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:33px;font-weight:700;letter-spacing:1px;line-height:150%;text-align:center;mso-line-height-alt:39.6px;">
 <p style="margin: 0;">Hey partner thank you for requesting a reseller account, we will be back with you shortly.</p>
 </div>
 </td>
@@ -875,7 +875,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
+<h1 style="margin: 0; color: #000000; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 22px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 26.4px;"><span class="tinyMce-placeholder">Why Choose Folio Phone Pods?</span></h1>
 </td>
 </tr>
 </table>
@@ -899,7 +899,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://files.soundboxstore.com/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Ships flat to your door" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-1.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Ships flat to your door" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -907,7 +907,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Ships flat to your door</span></h1>
 </td>
 </tr>
 </table>
@@ -917,7 +917,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Plug & play" src="https://files.soundboxstore.com/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Plug & play" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-2.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Plug & play" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -925,7 +925,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Plug & play</span></h1>
 </td>
 </tr>
 </table>
@@ -935,7 +935,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://files.soundboxstore.com/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Flexible to any space" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-3.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Flexible to any space" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -943,7 +943,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Flexible to any space</span></h1>
 </td>
 </tr>
 </table>
@@ -953,7 +953,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 60px;"><img alt="Movable" src="https://files.soundboxstore.com/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
+<div style="max-width: 60px;"><img alt="Movable" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/icons_sbsw1-4.jpg" style="display: block; height: auto; border: 0; width: 100%;" title="Movable" width="60"/></div>
 </div>
 </td>
 </tr>
@@ -961,7 +961,7 @@ export const CONFIRMATION_HTML = `
 <table border="0" cellpadding="0" cellspacing="0" class="heading_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:5px;padding-top:5px;text-align:center;width:100%;">
-<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 120%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
+<h1 style="margin: 0; color: #393d47; direction: ltr; font-family: 'Banana Grotesk','Open Sans',Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; letter-spacing: normal; line-height: 150%; text-align: center; margin-top: 0; margin-bottom: 0; mso-line-height-alt: 14.399999999999999px;"><span class="tinyMce-placeholder">Movable</span></h1>
 </td>
 </tr>
 </table>
@@ -1002,7 +1002,7 @@ export const CONFIRMATION_HTML = `
 <tr>
 <td class="pad" style="width:100%;">
 <div align="center" class="alignment" style="line-height:10px">
-<div style="max-width: 53px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://files.soundboxstore.com/images/SBS-new-logo-icon.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="53"/></a></div>
+<div style="max-width: 53px;"><a href="https://soundboxstore.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/SBS-new-logo-icon.png" style="display: block; height: auto; border: 0; width: 100%;" title="Sound Box Store - Modern Office Sound Booth, Sound Pods, Acoustic Booth" width="53"/></a></div>
 </div>
 </td>
 </tr>
@@ -1013,10 +1013,10 @@ export const CONFIRMATION_HTML = `
 <div align="center" class="alignment">
 <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="148px">
 <tr>
-<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
-<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://files.soundboxstore.com/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.instagram.com/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.linkedin.com/company/sound-box-store/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.pinterest.co.uk/soundboxstore/" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/pinterest2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
+<td style="padding:0 5px 0 0px;"><a href="https://www.youtube.com/@soundboxstore9298" target="_blank"><img alt="Sound Box Store" height="32" src="https://medusa-space.sgp1.cdn.digitaloceanspaces.com/soundboxstore/images/youtube2x.png" style="display: block; height: auto; border: 0;" title="Sound Box Store" width="32"/></a></td>
 </tr>
 </table>
 </div>
